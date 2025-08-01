@@ -1,197 +1,210 @@
-/* Tipografía elegante */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
-
-* {
-    box-sizing: border-box;
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1538485399081-7c8970e91a2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Fondo con imagen */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-attachment: fixed; /* Fondo fijo al hacer scroll */
+    background-position: center; /* Centrado */
+    color: #333; /* Texto gris oscuro */
+    line-height: 1.9; /* Altura entre líneas */
 }
 
-/* Colores principales */
-:root {
-    --rosa-claro: #ffe6f0;
-    --rosado: #e6697d;
-    --gris-suave: #f9f9f9;
-    --dorado: #f3b257;
-    --texto: #333;
-}
-
-body {
-    background-color: var(--gris-suave);
-    color: var(--texto);
-    line-height: 1.6;
-    padding-bottom: 50px;
-}
-
-header {
-    background-color: var(--rosado);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
+/* Estilos para el nav */
 nav {
-    background-color: white;
-    padding: 1rem;
-    border-bottom: 2px solid var(--rosado);
-    position: sticky;
+    background-color: #d3232a; /* Color de fondo rojo corporativo */
+    padding: 1rem 0;
+    position: sticky; /* Se mantiene visible al hacer scroll */
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Prioridad sobre otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra inferior */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    list-style-type: none; /* Quita viñetas */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alineación horizontal */
+    justify-content: center; /* Centrado */
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: var(--rosado);
-    font-weight: bold;
-    padding: 0.5rem;
-    transition: all 0.3s;
+nav li {
+    margin: 0 15px; /* Espaciado entre enlaces */
 }
 
-nav ul li a:hover {
-    background-color: var(--rosado);
+nav a {
     color: white;
-    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Transición suave */
 }
 
+nav a:hover {
+    background-color: #a51c22; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Levanta el enlace ligeramente */
+}
+
+/* Estilos para las secciones */
 section {
-    padding: 2rem 5%;
+    padding: 2rem 10%; /* Relleno interno */
+    margin: 2rem 0; /* Espacio arriba y abajo */
     background-color: white;
-    margin: 1rem auto;
-    border-radius: 10px;
-    max-width: 1000px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; /* Centrado horizontal */
 }
 
+/* Título principal */
 h2 {
-    color: var(--dorado);
-    margin-bottom: 1rem;
+    color: #d3232a;
+    border-bottom: 2px solid #d3232a; /* Línea debajo del título */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
+/* Subtítulo */
+h3 {
+    color: #d3232a;
+    border-bottom: 2px solid #d3232a;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin: center;
+    text-align: center;
+}
+
+/* Galería de imágenes rotatoria */
 .hero-gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    height: 600px;
     margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Permite posicionar las imágenes encima */
 }
 
 .hero-gallery img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta sin deformar */
+    position: absolute;
+    opacity: 0; /* Ocultas por defecto */
+    transition: opacity 1s ease-in-out;
 }
 
+.hero-gallery img:first-child {
+    opacity: 1; /* Solo la primera se muestra al inicio */
+}
+
+/* Animación para rotar las imágenes */
+@keyframes galleryRotation {
+    0%, 25% {
+        opacity: 1;
+    }
+    30%, 100% {
+        opacity: 0;
+    }
+}
+
+.hero-gallery img:nth-child(1) {
+    animation: galleryRotation 12s infinite; /* Empieza al instante */
+}
+
+.hero-gallery img:nth-child(2) {
+    animation: galleryRotation 12s infinite 4s; /* Después de 4 segundos */
+}
+
+.hero-gallery img:nth-child(3) {
+    animation: galleryRotation 12s infinite 8s; /* Después de 8 segundos */
+}
+
+/* Estilos para la tabla */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-table caption {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    border-collapse: collapse; /* Quita espacios entre bordes */
+    margin: 1.5rem 0;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 0.8rem;
+    padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea entre filas */
 }
 
 th {
-    background-color: var(--rosa-claro);
+    background-color: #d3232a;
+    color: white; /* Cabecera con color de contraste */
 }
 
-tr:nth-child(even) {
-    background-color: #fdf2f5;
-}
-
-/* Formulario */
+/* Estilos para el formulario */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+    display: grid;
+    grid-gap: 1rem; /* Espacio entre campos */
+    max-width: 600px;
+    margin: 0 auto; /* Centrado */
+}
+
+label {
+    font-weight: 500;
+    color: #555;
 }
 
 input, textarea {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
     font-size: 1rem;
 }
 
 button {
-    background-color: var(--rosado);
+    background-color: #d3232a;
     color: white;
     border: none;
-    padding: 0.8rem;
-    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: var(--dorado);
+    background-color: #a51c22;
 }
 
-/* Footer */
+/* Estilos para el footer */
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: var(--rosado);
-    color: rgb(15, 14, 14);
+    background-color: #333;
+    color: white;
     margin-top: 2rem;
 }
 
-/* Responsive */
+/* Responsive design */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Menú vertical en móvil */
         align-items: center;
     }
-
-    .hero-gallery img {
-        width: 100%;
-        max-width: 100%;
+    
+    nav li {
+        margin: 5px 0; /* Menor espacio entre enlaces */
     }
-
-    table, thead, tbody, th, td, tr {
-        display: block;
+    
+    section {
+        padding: 1.5rem 5%; /* Menor padding en pantallas pequeñas */
     }
-
-    th {
-        background-color: transparent;
-        font-weight: bold;
-    }
-
-    td {
-        padding-left: 50%;
-        position: relative;
-    }
-
-    td::before {
-        position: absolute;
-        left: 10px;
-        width: 45%;
-        white-space: nowrap;
-        font-weight: bold;
+    
+    .hero-gallery {
+        height: 250px; /* Galería más baja en móvil */
     }
 }

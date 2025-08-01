@@ -1,125 +1,96 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyecto Jhessy - Corea del Sur</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <nav>
-            
-            <ul>
-                <li><a href="#bienvenida">Bienvenida</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#cultura">Cultura</a></li>
-                <li><a href="#ciudades">Ciudades</a></li>
-                <li><a href="#conclusion">Conclusión</a></li>
-                <li><a href="#referencias">Referencias</a></li>
-                <li><a href="#formulario">Contáctanos</a></li>
-            </ul>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Jhessy - Corea del Sur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#bienvenida">Bienvenida</a></li>
+            <li><a href="#ciudades">Ciudades</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+            <li><a href="#formulario">Contáctanos</a></li>
+        </ul>
+    </nav>
 
+    <section id="bienvenida">
+        <h2>Bienvenida</h2>
+        <p>¡Bienvenido a nuestra página dedicada a Corea del Sur! A través de este espacio, descubrirás lo más hermoso y culturalmente impactante de este país asiático que ha conquistado al mundo con su tradición y modernidad.</p>
+    </section>
+    <section id="ciudades">
+        <h2>Ciudades para Visitar</h2>
+        <div class="hero-gallery">
+            <img src="img/seul.jpg" alt="Seúl">
+            <img src="img/Seoul-1.jpg" alt="Seoul-1">
+            <img src="img/seul-2.jpg" alt="Seoul-1">
+        </div>
 
+        <table>
+            <h3>Top Ciudades para Visitar</h3>
+            <thead>
+                <tr>
+                    <th>Ciudad</th>
+                    <th>Atractivos</th>
+                    <th>Por qué visitarla</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Seúl</td>
+                    <td>Palacio Gyeongbokgung, Namsan Tower</td>
+                    <td>Capital moderna con raíces tradicionales y gran vida nocturna.</td>
+                </tr>
+                <tr>
+                    <td>Busan</td>
+                    <td>Playas, templos y mercados de mariscos</td>
+                    <td>Perfecta para relajarse y disfrutar del mar.</td>
+                </tr>
+                <tr>
+                    <td>Incheon</td>
+                    <td>Islas, Chinatown, arquitectura moderna</td>
+                    <td>Ideal para escapadas rápidas cerca de Seúl.</td>
+                </tr>
+                <tr>
+                    <td>Gyeongju</td>
+                    <td>Templos antiguos, tumbas reales</td>
+                    <td>Conocida como el "museo sin muros" de Corea.</td>
+                </tr>
+                <tr>
+                    <td>Jeonju</td>
+                    <td>Hanok Village, gastronomía</td>
+                    <td>Famosa por su comida y tradiciones.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-        </header>
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p>Corea del Sur es un país que lo tiene todo: historia, cultura, tecnología, paisajes naturales y ciudades vibrantes. Conocerla es abrir la mente a una nueva forma de vivir, valorar el pasado y admirar el presente. Te invitamos a descubrirla, sentirla y vivirla.</p>
+    </section>
 
-        <section id="bienvenida">
-            <h2>Bienvenida</h2>
-            <p>¡Bienvenido a nuestra página dedicada a Corea del Sur! A través de este espacio, descubrirás lo más hermoso y culturalmente impactante de este país asiático que ha conquistado al mundo con su tradición y modernidad.</p>
-        </section>
+    <section id="formulario">
+        <h2>Contáctanos</h2>
+        <p>¿Te gustaría saber más o planificar tu viaje?</p>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-        <section id="historia">
-            <h2>Un Poco de Historia</h2>
-            <p>Corea del Sur, oficialmente conocida como la República de Corea, fue fundada en 1948 después de la división de la península coreana. Desde entonces, ha evolucionado desde un país devastado por la guerra hasta convertirse en una de las economías más avanzadas del mundo. Su historia está marcada por la resiliencia, el crecimiento y la preservación de su identidad cultural.</p>
-        </section>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
 
-        <section id="cultura">
-            <h2>Cultura Coreana</h2>
-            <p>La cultura coreana es rica y diversa, influenciada por siglos de tradición y la innovación moderna. Desde el Hanbok (traje tradicional) hasta el K-pop, Corea del Sur ha logrado cautivar a millones. También destacan su gastronomía única como el kimchi, el respeto por la familia, la escritura Hangul y sus rituales ancestrales.</p>
-        </section>
+            <label for="mensaje">Ciudad que te gustaría visitar:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-        <section id="ciudades">
-            <h2>Ciudades para Visitar</h2>
-            <div class="hero-gallery">
-                <img src="img/seul.jpg" alt="Seúl">
-                <img src="img/Seoul-1.jpg" alt="Seoul-1">
-                <img src="img/seul-2.jpg" alt="Seoul-1">
-            </div>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
 
-            <table>
-                <caption>Top Ciudades para Visitar</caption>
-                <thead>
-                    <tr>
-                        <th>Ciudad</th>
-                        <th>Atractivos</th>
-                        <th>Por qué visitarla</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Seúl</td>
-                        <td>Palacio Gyeongbokgung, Namsan Tower</td>
-                        <td>Capital moderna con raíces tradicionales y gran vida nocturna.</td>
-                    </tr>
-                    <tr>
-                        <td>Busan</td>
-                        <td>Playas, templos y mercados de mariscos</td>
-                        <td>Perfecta para relajarse y disfrutar del mar.</td>
-                    </tr>
-                    <tr>
-                        <td>Incheon</td>
-                        <td>Islas, Chinatown, arquitectura moderna</td>
-                        <td>Ideal para escapadas rápidas cerca de Seúl.</td>
-                    </tr>
-                    <tr>
-                        <td>Gyeongju</td>
-                        <td>Templos antiguos, tumbas reales</td>
-                        <td>Conocida como el "museo sin muros" de Corea.</td>
-                    </tr>
-                    <tr>
-                        <td>Jeonju</td>
-                        <td>Hanok Village, gastronomía</td>
-                        <td>Famosa por su comida y tradiciones.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="conclusion">
-            <h2>Conclusión</h2>
-            <p>Corea del Sur es un país que lo tiene todo: historia, cultura, tecnología, paisajes naturales y ciudades vibrantes. Conocerla es abrir la mente a una nueva forma de vivir, valorar el pasado y admirar el presente. Te invitamos a descubrirla, sentirla y vivirla.</p>
-        </section>
-
-        <section id="referencias">
-            <h2>Referencias</h2>
-            <ul>
-                <li>Visit Korea Official Tourism: <a href="https://english.visitkorea.or.kr" target="_blank">visitkorea.or.kr</a></li>
-                <li>Wikipedia: Corea del Sur</li>
-                <li>BBC Mundo Cultura y Sociedad Coreana</li>
-                <li>National Geographic Corea del Sur</li>
-            </ul>
-        </section>
-
-        <section id="formulario">
-            <h2>Contáctanos</h2>
-            <p>¿Te gustaría saber más o planificar tu viaje?</p>
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Ciudad que te gustaría visitar:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </section>
-
-        <footer>
-            <p>© 2025 Proyecto Jhessy. Todos los derechos reservados.</p>
-        </footer>
-
-    </body>
-    </html>
+    <footer>
+        <p> Proyecto Jhessy. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
