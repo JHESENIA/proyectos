@@ -72,25 +72,28 @@
         <p>Corea del Sur es un país que lo tiene todo: historia, cultura, tecnología, paisajes naturales y ciudades vibrantes. Conocerla es abrir la mente a una nueva forma de vivir, valorar el pasado y admirar el presente. Te invitamos a descubrirla, sentirla y vivirla.</p>
     </section>
 
-    <section id="formulario">
-        <h2>Contáctanos</h2>
-        <p>¿Te gustaría saber más o planificar tu viaje?</p>
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+   <form id="contactForm" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required>
 
-            <label for="mensaje">Ciudad que te gustaría visitar:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    <label for="mensaje">Ciudad que te gustaría visitar:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </section>
+    <button type="submit">Enviar Mensaje</button>
 
-    <footer>
-        <p> Proyecto Jhessy. Todos los derechos reservados.</p>
-    </footer>
+        <form>
+                <div id="mensajeExito" class="mensaje-exito">
+                <span class="check-circle">&#10004;</span>
+                ¡Gracias por contactarnos! Te responderemos pronto.
+                </div>
+            </form>
+        <footer>
+            <p> Proyecto Jhessy. Todos los derechos reservados.</p>
+        </footer>
+
+      <script src="script.js"></script>
 </body>
 </html>
